@@ -87,6 +87,7 @@ function handleSetSimulated(val) {
     <div class="container">
       <header id="nyumbani" class="hero">
         <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--2" aria-hidden="true"></div>
         <div class="hero-top">
           <div>
             <p class="hero-kicker">{{ HERO.church }}</p>
@@ -163,7 +164,7 @@ function handleSetSimulated(val) {
         </div>
       </header>
 
-      <section id="ratiba" class="section ratiba-section">
+      <section id="ratiba" class="section ratiba-section" v-reveal>
         <SectionHeading
           eyebrow="Ratiba ya Siku Saba"
           title="Ratiba Kamili ya Makambi"
@@ -178,13 +179,17 @@ function handleSetSimulated(val) {
         </div>
 
         <main class="timeline-wrap" ref="timelineEl">
-          <div class="timeline-head">
-            <h3>{{ selectedDay?.weekday }}<span v-if="selectedDay?.label"> · {{ selectedDay.label }}</span></h3>
-            <span class="timeline-date">{{ selectedDay?.dateLabel }}</span>
-          </div>
-          <ol class="timeline">
-            <EventCard v-for="(ev, i) in selectedDayEvents" :key="i" :event="ev" />
-          </ol>
+          <Transition name="day-fade" mode="out-in">
+            <div :key="selectedDayKey">
+              <div class="timeline-head">
+                <h3>{{ selectedDay?.weekday }}<span v-if="selectedDay?.label"> · {{ selectedDay.label }}</span></h3>
+                <span class="timeline-date">{{ selectedDay?.dateLabel }}</span>
+              </div>
+              <ol class="timeline">
+                <EventCard v-for="(ev, i) in selectedDayEvents" :key="i" :event="ev" />
+              </ol>
+            </div>
+          </Transition>
         </main>
       </section>
 
@@ -194,7 +199,7 @@ function handleSetSimulated(val) {
       <CommitteeAccordion />
       <OpeningOrder />
 
-      <footer class="page-footer">
+      <footer class="page-footer" v-reveal>
         <p class="footer-church">{{ HERO.church }}</p>
         <p class="footer-sub">Mtaa wa Manzese — Dar es Salaam</p>
         <p class="footer-theme">"{{ HERO.theme }}"</p>
@@ -233,6 +238,22 @@ body {
 #app {
   background: #ffffff;
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 </style>
 
 <style scoped>
@@ -258,6 +279,16 @@ body {
   box-shadow: 0 25px 50px -20px rgba(40, 25, 100, 0.45);
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse at 70% 0%, black 0%, transparent 65%);
+  pointer-events: none;
+}
+
 .hero-glow {
   position: absolute;
   inset: -40% -10% auto auto;
@@ -265,6 +296,33 @@ body {
   height: 22rem;
   background: radial-gradient(circle, rgba(255, 190, 120, 0.35), transparent 70%);
   pointer-events: none;
+  animation: drift-1 14s ease-in-out infinite;
+}
+
+.hero-glow--2 {
+  inset: auto auto -35% -15%;
+  right: auto;
+  width: 20rem;
+  height: 20rem;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.28), transparent 70%);
+  animation: drift-2 18s ease-in-out infinite;
+}
+
+@keyframes drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-1.2rem, 1rem) scale(1.08); }
+}
+
+@keyframes drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(1rem, -0.8rem) scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  .hero-glow--2 {
+    animation: none;
+  }
 }
 
 .hero-top {
@@ -552,6 +610,20 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.day-fade-enter-active {
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.day-fade-leave-active {
+  transition: opacity 0.16s ease;
+}
+.day-fade-enter-from {
+  opacity: 0;
+  transform: translateX(10px);
+}
+.day-fade-leave-to {
+  opacity: 0;
 }
 
 .section {

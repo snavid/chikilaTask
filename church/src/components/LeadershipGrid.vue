@@ -17,7 +17,7 @@ const brokenPhotos = reactive({})
 </script>
 
 <template>
-  <section id="uongozi" class="section">
+  <section id="uongozi" class="section" v-reveal>
     <SectionHeading
       eyebrow="Team"
       title="Wahudumu Wakuu"

@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading.vue'
 </script>
 
 <template>
-  <section id="ufunguzi" class="section">
+  <section id="ufunguzi" class="section" v-reveal>
     <SectionHeading eyebrow="Kiambatisho" :title="OPENING_ORDER.title" :desc="OPENING_ORDER.when" />
     <ol class="order-list">
       <li v-for="(s, i) in OPENING_ORDER.steps" :key="s.step" class="order-item">

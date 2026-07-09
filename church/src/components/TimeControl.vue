@@ -88,6 +88,12 @@ function useReal() {
   border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 8px 24px -10px rgba(35, 20, 90, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tc-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -10px rgba(35, 20, 90, 0.45);
 }
 
 .tc-toggle.active {

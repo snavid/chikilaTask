@@ -16,12 +16,14 @@ const emit = defineEmits(['update:modelValue'])
         active: day.dayKey === modelValue,
         live: day.dayHasLive,
         past: day.dayIsFullyPast,
+        today: day.dayIsToday,
       }"
       @click="emit('update:modelValue', day.dayKey)"
     >
       <span class="day-tab-weekday">{{ day.weekday }}</span>
       <span class="day-tab-date">{{ day.dateLabel.split(' ')[0] }}</span>
       <span v-if="day.label" class="day-tab-label">{{ day.label }}</span>
+      <span v-if="day.dayIsToday" class="day-tab-today">LEO</span>
       <span v-if="day.dayHasLive" class="day-tab-dot" aria-hidden="true"></span>
     </button>
   </div>
@@ -68,9 +70,30 @@ const emit = defineEmits(['update:modelValue'])
 }
 
 .day-tab-date {
-  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
   font-weight: 700;
   color: #24234a;
+}
+
+.day-tab-today {
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #2f9e6e;
+  background: #e8f7ef;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+}
+
+.day-tab.active .day-tab-today {
+  color: #1f7a51;
+  background: #d6f5e3;
+}
+
+.day-tab.today:not(.active) {
+  border-color: #b7e8cd;
+  box-shadow: 0 0 0 1px #b7e8cd inset;
 }
 
 .day-tab-label {

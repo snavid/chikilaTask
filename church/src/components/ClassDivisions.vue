@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading.vue'
 </script>
 
 <template>
-  <section id="madarasa" class="section">
+  <section id="madarasa" class="section" v-reveal>
     <SectionHeading
       eyebrow="Huduma za Familia"
       title="Mgawanyiko wa Madarasa"

@@ -108,6 +108,12 @@ const monogram = computed(() =>
   box-shadow: 0 1px 2px rgba(30, 20, 70, 0.04);
 }
 
+.event.upcoming .event-body:hover {
+  transform: translateY(-2px);
+  border-color: #ded9f7;
+  box-shadow: 0 14px 26px -18px rgba(76, 58, 163, 0.4);
+}
+
 .event.past .event-body {
   opacity: 0.48;
   filter: saturate(0.7);
@@ -200,8 +206,9 @@ const monogram = computed(() =>
 
 .event-title {
   margin: 0 0 0.35rem;
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
   color: #201f3d;
   line-height: 1.3;
 }

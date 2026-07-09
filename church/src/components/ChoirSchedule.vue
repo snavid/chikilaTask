@@ -6,7 +6,7 @@ const days = Object.entries(CHOIR_SCHEDULE)
 </script>
 
 <template>
-  <section id="kwaya" class="section">
+  <section id="kwaya" class="section" v-reveal>
     <SectionHeading
       eyebrow="Muziki wa Kambi"
       title="Ratiba ya Uimbaji wa Kwaya"
