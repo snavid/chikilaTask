@@ -6,7 +6,7 @@ const props = defineProps({
   event: { type: Object, required: true },
 })
 
-const category = computed(() => CATEGORIES[props.event.kind])
+const category = computed(() => CATEGORIES[props.event.kind] ?? { label: 'Ratiba', color: '#6b6886' })
 const monogram = computed(() =>
   category.value.label
     .split(' ')
@@ -45,10 +45,10 @@ const monogram = computed(() =>
 
       <h3 class="event-title">{{ event.title }}</h3>
 
-      <div class="event-meta">
-        <span><strong>Mhusika:</strong> {{ event.lead }}</span>
-        <span><strong>Mwenyekiti:</strong> {{ event.chair }}</span>
-        <span class="committee"><strong>Kamati:</strong> {{ event.committee }}</span>
+      <div class="event-meta" v-if="event.lead || event.chair || event.committee">
+        <span v-if="event.lead"><strong>Mhusika:</strong> {{ event.lead }}</span>
+        <span v-if="event.chair"><strong>Mwenyekiti:</strong> {{ event.chair }}</span>
+        <span v-if="event.committee" class="committee"><strong>Kamati:</strong> {{ event.committee }}</span>
       </div>
     </div>
   </li>
