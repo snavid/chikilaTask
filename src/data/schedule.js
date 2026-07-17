@@ -1,15 +1,15 @@
 export const EVENT_TITLE = 'Nitakwenda Nikimsubiri Yesu'
-export const EVENT_SUBTITLE = 'Ratiba ya Makambi 2026 · Mtaa wa Manzese, Dar es Salaam'
+export const EVENT_SUBTITLE = 'Ratiba ya Makambi 2026 · Mtaa wa Kiromo, Dar es Salaam'
 export const EVENT_START_LABEL = '18 Julai 2026'
 export const EVENT_END_LABEL = '25 Julai 2026'
 
 export const HERO = {
   church: 'KANISA LA WAADVENTISTA WA SABATO',
   title: 'RATIBA YA MAKAMBI 2026',
-  subtitle: 'MTAA WA MANZESE — DAR ES SALAAM',
+  subtitle: 'MTAA WA Kiromo — DAR ES SALAAM',
   theme: 'Nitakwenda Nikimsubiri Yesu',
   dateRange: '18 — 25 Julai 2026',
-  location: 'Manzese, Dar es Salaam',
+  location: 'Kiromo, Dar es Salaam',
   verse: {
     text: 'Basi mambo hayo yaanzapo kutokea, simameni, mkaviinue vichwa vyenu; kwa kuwa ukombozi wenu unakaribia.',
     ref: 'Luka 21:28',
@@ -37,7 +37,7 @@ export const LEADERS = [
   { name: 'Pr. Sadiki Safiel', role: 'Unabii — Mchungaji wa Mtaa Ruvu', photo: '/leaders/sadiki-safiel.png' },
   { name: 'Pr. Poul Mjema', role: 'Darasa la Mabalozi — Mwanafunzi, Bugema University, Uganda', photo: '/leaders/poul-mjema.png' },
   { name: 'Mwinj. Fabian Mkama', role: 'Muinjilisti — Mtaa wa Buma', photo: '/leaders/fabian-mkama.png' },
-  { name: 'Or. Bryson Mding’i', role: 'Mkuu wa Kambi / Mchungaji wa Mtaa wa Kiromo', photo: '/leaders/bryson-mdingi.png' },
+  { name: 'Pr. Bryson Mding’i', role: 'Mkuu wa Kambi / Mchungaji wa Mtaa wa Kiromo', photo: '/leaders/bryson-mdingi.png' },
  
   { name: 'Pr. Charles Mjema', role: 'Mhubiri wa Kambi — Mchungaji wa Mtaa wa Visiga', photo: '/leaders/charles-mjema.png' },
 

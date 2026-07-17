@@ -47,7 +47,7 @@ onUnmounted(() => {
         <span class="brand-mark">MZ</span>
         <span class="brand-text">
           <span class="brand-title">Kambi 2026</span>
-          <span class="brand-sub">Mtaa wa Manzese</span>
+          <span class="brand-sub">Mtaa wa Kiromo</span>
         </span>
       </button>
 
