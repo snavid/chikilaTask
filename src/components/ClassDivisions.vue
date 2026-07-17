@@ -3,7 +3,7 @@ import { CLASS_DIVISIONS } from '../data/schedule.js'
 import SectionHeading from './SectionHeading.vue'
 </script>
 
-<template>
+<!-- <template>
   <section id="madarasa" class="section" v-reveal>
     <SectionHeading
       eyebrow="Huduma za Familia"
@@ -18,7 +18,7 @@ import SectionHeading from './SectionHeading.vue'
       </div>
     </div>
   </section>
-</template>
+</template> -->
 
 <style scoped>
 .section {
