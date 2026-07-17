@@ -2,7 +2,7 @@
 import { OPENING_ORDER } from '../data/schedule.js'
 import SectionHeading from './SectionHeading.vue'
 </script>
-
+<!-- 
 <template>
   <section id="ufunguzi" class="section" v-reveal>
     <SectionHeading eyebrow="Kiambatisho" :title="OPENING_ORDER.title" :desc="OPENING_ORDER.when" />
@@ -16,7 +16,7 @@ import SectionHeading from './SectionHeading.vue'
       </li>
     </ol>
   </section>
-</template>
+</template> -->
 
 <style scoped>
 .section {
