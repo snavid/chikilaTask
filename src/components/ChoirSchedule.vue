@@ -1,8 +1,6 @@
 <script setup>
-import { CHOIR_SCHEDULE } from '../data/schedule.js'
+import { CHOIR_LIST } from '../data/schedule.js'
 import SectionHeading from './SectionHeading.vue'
-
-const days = Object.entries(CHOIR_SCHEDULE)
 </script>
 
 <template>
@@ -12,14 +10,13 @@ const days = Object.entries(CHOIR_SCHEDULE)
       title="Ratiba ya Uimbaji wa Kwaya"
       desc="Orodha ya kwaya na vikundi vitakavyoshiriki kuimba kila siku."
     />
-    <div class="choir-list">
-      <div v-for="[day, choirs] in days" :key="day" class="choir-row">
-        <span class="choir-day">{{ day }}</span>
-        <div class="choir-chips">
-          <span v-for="name in choirs" :key="name" class="choir-chip">{{ name }}</span>
-        </div>
-      </div>
-    </div>
+    <ol class="choir-list">
+      <li v-for="(choir, i) in CHOIR_LIST" :key="choir.name" class="choir-row">
+        <span class="choir-num">{{ i + 1 }}</span>
+        <span class="choir-name">{{ choir.name }}</span>
+        <span v-if="choir.location" class="choir-location">({{ choir.location }})</span>
+      </li>
+    </ol>
   </section>
 </template>
 
@@ -33,18 +30,22 @@ const days = Object.entries(CHOIR_SCHEDULE)
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .choir-row {
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  gap: 0.7rem;
+  align-items: baseline;
   padding: 0.85rem 1rem;
   border-radius: 16px;
   background: #fdf5f2;
   border: 1px solid #f6e2da;
   flex-wrap: wrap;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
 }
 
 .choir-row:hover {
@@ -52,28 +53,22 @@ const days = Object.entries(CHOIR_SCHEDULE)
   box-shadow: 0 14px 26px -18px rgba(176, 79, 52, 0.45);
 }
 
-.choir-day {
-  flex: 0 0 8rem;
+.choir-num {
+  flex: 0 0 1.6rem;
   font-weight: 800;
   font-size: 0.85rem;
   color: #b04f34;
-  padding-top: 0.2rem;
 }
 
-.choir-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  flex: 1;
-}
-
-.choir-chip {
-  font-size: 0.76rem;
-  font-weight: 600;
+.choir-name {
+  font-weight: 700;
+  font-size: 0.85rem;
   color: #8a4530;
-  background: #fff;
-  border: 1px solid #f0d9d0;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
+}
+
+.choir-location {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #b0715a;
 }
 </style>

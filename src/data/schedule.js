@@ -53,15 +53,22 @@ export const CLASS_DIVISIONS = [
   { name: 'Vijana Wakubwa (Miaka 22+)', minister: 'Mch. Faraja Jacob', desc: 'Miaka 22 na kuendelea.' },
 ]
 
-export const CHOIR_SCHEDULE = {
-  'Jumapili 19/07': ['Redemption Ministers Choir', "King'ongo SDA Choir", 'Angaza Choir', 'El-Shadai Choir', 'Voice of Redemption', 'The Way', 'Sauti ya Nyikani', 'Tarumbeta Choir'],
-  'Jumatatu 20/07': ['Redemption Ministers Choir', 'Angaza Choir', 'Voice of Redemption', 'The Way', 'Accendo TZ', 'Tarumbeta Choir'],
-  'Jumanne 21/07': ['Redemption Ministers Choir', 'El-Shadai Choir', 'Amani Youth Choir', 'The Voice of Redemption', 'Tarumbeta Choir'],
-  'Jumatano 22/07': ['Redemption Ministers Choir', 'Angaza Choir', 'El-Shadai Choir', 'The Way', 'Tarumbeta Choir'],
-  'Alhamisi 23/07': ['Redemption Ministers Choir', 'Angaza Choir', 'Sauti ya Nyikani SDA Choir', 'El-Shadai Choir', 'Tarumbeta Choir'],
-  'Ijumaa 24/07': ['Redemption Ministers Choir', 'El-Shadai Choir', 'Voice of Redemption', 'The Way', 'Tarumbeta Choir'],
-  'Sabato 25/07': ['Redemption Ministers Choir', "King'ongo SDA Choir", 'El-Shadai Choir', 'Angaza Choir', 'Voice of Redemption', 'The Way', 'Accendo TZ', 'Tarumbeta Choir'],
-}
+export const CHOIR_LIST = [
+  { name: 'Bunju Youth Choir', location: "Bunju S.D.A" },
+  { name: 'Precious Singers', location: "Iringas S.D.A" },
+  { name: "Bagamoyo Youth Choir", location: "B'moyo S.D.A" },
+  { name: 'Karege S.D.A Choir', location: 'Kerege' },
+  { name: 'Kerege Youth Choir', location: 'Kerege S.D.A' },
+  { name: 'Buma S.D.A Choir', location: 'Zinga' },
+  { name: 'Kongo S.D.A Choir', location: "Kongo B'moyo" },
+  { name: 'Kiromo S.D.A Choir', location: "Kiromo B'moyo" },
+  { name: 'Amo Dorikas Choir', location: 'Zinga S.D.A' },
+  { name: 'Kilima Hewa S.D.A Choir', location: '' },
+  { name: 'Kinzudi S.D.A Choir', location: '' },
+  { name: 'Advent Melody', location: 'Makongo S.D.A Dar' },
+  { name: 'Matumbi S.D.A Choir', location: "Matumbi B'moyo Pwani" },
+  { name: 'The Greate Singers', location: 'Bunju S.D.A Dar' },
+]
 
 export const COMMITTEES = [
   { title: 'Kamati Kuu ya Kambi — Watu Wazima', members: ['Mkuu wa Kambi — Pr. Jackson Shayo', 'Mzee Mshauri wa Kamati — William Gomera', 'Mwenyekiti — Bhoke Chacha Rioba', 'Makamu Mwenyekiti — Haikael Kiravu', 'Katibu Mkuu — Tumaini Mshana', 'Katibu Msaidizi — Neema Maleo', 'Mhazini wa Kambi — Florencia Maro', 'Mhazini Msaidizi — Miriam Salugole'] },
