@@ -201,7 +201,7 @@ function handleSetSimulated(val) {
 
       <footer class="page-footer" v-reveal>
         <p class="footer-church">{{ HERO.church }}</p>
-        <p class="footer-sub">Mtaa wa Kiromo — Dar es Salaam</p>
+        <p class="footer-sub">Mtaa wa Kiromo — BAGAMOYO</p>
         <p class="footer-theme">"{{ HERO.theme }}"</p>
         <p class="footer-copy">Ratiba ya Makambi 2026 · {{ HERO.dateRange }}</p>
         <div class="footer-divider"></div>
