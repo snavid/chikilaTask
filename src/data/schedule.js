@@ -32,12 +32,12 @@ export const NAV_SECTIONS = [
 ]
 
 export const LEADERS = [
-  { name: 'Pr. Moses Nyange', role: 'Uongozi na Mafundisho — Mchungaji wa Mtaa', photo: '/leaders/moses-nyange.png' },
-  { name: 'Pr. Celisius Karugendo', role: 'Uongozi na Mafundisho — Mchungaji wa Mtaa', photo: '/leaders/celisius-karugendo.png' },
-  { name: 'Pr. Sadiki Safiel', role: 'Unabii — Mchungaji wa Mtaa Ruvu', photo: '/leaders/sadiki-safiel.png' },
-  { name: 'Pr. Poul Mjema', role: 'Darasa la Mabalozi — Mwanafunzi, Bugema University, Uganda', photo: '/leaders/poul-mjema.png' },
+  { name: 'Pr. Moses Nyange', role: 'Uongozi na Mafundisho — Mchungaji wa Mtaa wa kiromo', photo: '/leaders/moses-nyange.png' },
+  { name: 'Pr. Celisius Karugendo', role: 'Uongozi na Mafundisho — Chaplain wa Hospitali - Kanda ya Dar ECF', photo: '/leaders/celisius-karugendo.png' },
+  { name: 'Pr. Sadiki Safiel', role: 'Unabii — Mchungaji wa Mtaa wa mivumoni', photo: '/leaders/sadiki-safiel.png' },
+  { name: 'Pr. Poul Mjema', role: 'Darasa la Mabalozi — Mchungaji mafunzoni, Bugema University, Uganda', photo: '/leaders/poul-mjema.png' },
   { name: 'Mwinj. Fabian Mkama', role: 'Muinjilisti — Mtaa wa Buma', photo: '/leaders/fabian-mkama.png' },
-  { name: 'Pr. Bryson Mding’i', role: 'Mkuu wa Kambi / Mchungaji wa Mtaa wa Kiromo', photo: '/leaders/bryson-mdingi.png' },
+  { name: 'Pr. Bryson Mding’i', role: ' Mchungaji wa Mtaa wa Kiromo', photo: '/leaders/bryson-mdingi.png' },
  
   { name: 'Pr. Charles Mjema', role: 'Mhubiri wa Kambi — Mchungaji wa Mtaa wa Visiga', photo: '/leaders/charles-mjema.png' },
 
@@ -55,14 +55,14 @@ export const CLASS_DIVISIONS = [
 
 export const CHOIR_LIST = [
   { name: 'Bunju Youth Choir', location: "Bunju S.D.A" },
-  { name: 'Precious Singers', location: "Iringas S.D.A" },
+  { name: 'Precious Singers', location: "Zinga S.D.A" },
   { name: "Bagamoyo Youth Choir", location: "B'moyo S.D.A" },
   { name: 'Karege S.D.A Choir', location: 'Kerege' },
   { name: 'Kerege Youth Choir', location: 'Kerege S.D.A' },
-  { name: 'Buma S.D.A Choir', location: 'Iringas' },
+  { name: 'Buma S.D.A Choir', location: 'Zinga S.D.A' },
   { name: 'Kongo S.D.A Choir', location: "Kongo B'moyo" },
   { name: 'Kiromo S.D.A Choir', location: "Kiromo B'moyo" },
-  { name: 'Amo Dorikas Choir', location: 'Iringas S.D.A' },
+  { name: 'Amo Dorikas Choir', location: 'Zinga S.D.A' },
   { name: 'Kilima Hewa S.D.A Choir', location: '' },
   { name: 'Kinzudi S.D.A Choir', location: '' },
   { name: 'Advent Melody', location: 'Makongo S.D.A Dar' },
