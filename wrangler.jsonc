@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "church",
+  "name": "chikilatask",
   "compatibility_date": "2026-07-09",
   "assets": {
     "directory": "./dist",
