@@ -154,7 +154,7 @@ export const SCHEDULE = [
       { time: '14:00 - 14:35', title: 'uimbaji', kind: 'MUZIKI' },
       { time: '14:35 - 15:30', title: 'mgawanyiko', kind: 'FAMILIA' },
       { time: '15:30 - 16:30', title: 'Uimbaji', kind: 'MUZIKI' },
-      { time: '16:30 - 15:50', title: 'Ibada ya kambi', kind: 'IBADA'}
+      { time: '16:30 - 17:50', title: 'Ibada ya kambi', kind: 'IBADA'}
     ],
   },
   {
